@@ -1,7 +1,8 @@
 from django.db import models
 
-# Create your models here.
+# Aquí crearemos los modelos
 
+#Modelo para las pizzas
 class Pizza(models.Model):
 
     nombre = models.CharField(max_length=255)
@@ -13,6 +14,7 @@ class Pizza(models.Model):
     def __str__(self):
         return(self.nombre)
 
+#Modelo para los complementos
 class Complemento(models.Model):
 
     nombre = models.CharField(max_length=255)

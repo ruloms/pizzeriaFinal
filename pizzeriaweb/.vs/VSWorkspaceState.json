@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\pizzeriaapp"
+    "\\pizzeriaapp",
+    "\\pizzeriaweb"
   ],
-  "SelectedNode": "\\pizzeriaapp\\models.py",
+  "SelectedNode": "\\pizzeriaweb\\settings.py",
   "PreviewInSolutionExplorer": false
 }
