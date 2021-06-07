@@ -10,3 +10,8 @@ def index(request):
 def about(request):
     listaPizzas = Pizza.objects.all()
     return render(request, 'about.html', {'pizzas':listaPizzas})
+
+def menu(request):
+    listaPizzas = Pizza.objects.all()
+    listaComplementos = Complemento.objects.all()
+    return render(request, 'menu.html', {'pizzas':listaPizzas, 'complementos':listaComplementos})

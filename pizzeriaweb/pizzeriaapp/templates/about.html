@@ -80,7 +80,7 @@
                 <div id="header-inner-wrap" class=" style3">
                     <div id="left-header-mobile" class="clearfix">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="upload/logo.png" alt="Logo" /><img class="sticky-logo" src="upload/logo.png" alt="Logo" /></a>
+                           <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div class="mobile-nav-controller-wrap">
                             <div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"><i class="font-icon icon-list2"></i></div>
@@ -88,7 +88,7 @@
                     </div>
                     <div id="header-wrap" class="be-wrap clearfix" data-default-height="100" data-sticky-height="92">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="upload/logo.png" alt="Logo" /><img class="sticky-logo" src="upload/logo.png" alt="Logo" /></a>
+                            <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div id="header-controls-right">
                             <div class="header-code-widgets">
@@ -107,8 +107,8 @@
                             <div class="menu">
                                 <ul id="menu" class="clearfix">
                                     <li class="menu-item current-menu-item current_page_item"><a href="..">Home</a></li>
-                                    <li class="menu-item"><a href="about">About</a></li>
-                                    <li class="menu-item"><a href="menu">Menu</a></li>
+                                    <li class="menu-item"><a href="">About</a></li>
+                                    <li class="menu-item"><a href="../menu">Menu</a></li>
                                     <li class="menu-item"><a href="pizzas">Pizza</a></li>
                                     <li class="menu-item"><a href="blog">Blog</a></li>
                                     <li class="menu-item"><a href="contact">Contact Us</a></li>
@@ -122,8 +122,8 @@
                         <div class="mobile-menu">
                             <ul id="mobile-menu" class="clearfix">
                                 <li class="menu-item current-menu-item current_page_item"><a href="..">Home</a></li>
-                                    <li class="menu-item"><a href="about">About</a></li>
-                                    <li class="menu-item"><a href="menu">Menu</a></li>
+                                    <li class="menu-item"><a href="">About</a></li>
+                                    <li class="menu-item"><a href="../menu">Menu</a></li>
                                     <li class="menu-item"><a href="pizzas">Pizza</a></li>
                                     <li class="menu-item"><a href="blog">Blog</a></li>
                                     <li class="menu-item"><a href="contact">Contact Us</a></li>
@@ -358,14 +358,14 @@
     </script>
 
 
-    <script type='text/javascript' src='js/be-modules-plugin.js'></script>
-    <script type='text/javascript' src='js/plugins.js'></script>
-    <script type='text/javascript' src='js/script.js'></script>
-    <script type='text/javascript' src='js/be-modules-script.js'></script>
-    <script type='text/javascript' src='js/jquery-blockui/jquery.blockUI.min.js'></script>
-    <script type='text/javascript' src='js/be-slider.js'></script>
-    <script type='text/javascript' src='js/jquery-ui-1.8.22.custom.min.js'></script>
-    <script type='text/javascript' src='js/jquery.easing.min.js'></script>
+    <script type='text/javascript' src="{% static 'js/be-modules-plugin.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/plugins.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/script.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/be-modules-script.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jquery-blockui/jquery.blockUI.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/be-slider.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jquery-ui-1.8.22.custom.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jquery.easing.min.js' %}"></script>
 
 </body>
 </html>

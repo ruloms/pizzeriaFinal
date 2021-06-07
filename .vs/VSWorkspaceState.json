@@ -4,9 +4,13 @@
     "\\pizzeriaweb",
     "\\pizzeriaweb\\pizzeriaapp",
     "\\pizzeriaweb\\pizzeriaapp\\static",
+    "\\pizzeriaweb\\pizzeriaapp\\static\\css",
+    "\\pizzeriaweb\\pizzeriaapp\\static\\images",
+    "\\pizzeriaweb\\pizzeriaapp\\static\\js",
     "\\pizzeriaweb\\pizzeriaapp\\templates",
+    "\\pizzeriaweb\\pizzeriaapp\\templates\\pizzeriaweb",
     "\\pizzeriaweb\\pizzeriaweb"
   ],
-  "SelectedNode": "\\pizzeriaweb\\pizzeriaapp\\views.py",
+  "SelectedNode": "\\pizzeriaweb\\pizzeriaapp\\urls.py",
   "PreviewInSolutionExplorer": false
 }
