@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\pizzeriaapp",
+    "\\pizzeriaapp\\templates\\pizzeriaweb",
     "\\pizzeriaweb"
   ],
-  "SelectedNode": "\\pizzeriaweb\\settings.py",
+  "SelectedNode": "\\pizzeriaapp\\admin.py",
   "PreviewInSolutionExplorer": false
 }

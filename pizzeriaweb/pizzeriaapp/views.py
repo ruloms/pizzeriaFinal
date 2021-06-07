@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Pizza, Concesionario
+from .models import Pizza, Complemento
 
 # Create your views here.
 
 def index(request):
     		listaPizzas = Pizza.objects.all()
-    		return render(request, 'pizzas/index', {'pizzas':listaPizzas})
+    		return render(request, 'index.html', {'pizzas':listaPizzas})

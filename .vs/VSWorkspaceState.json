@@ -3,10 +3,10 @@
     "",
     "\\pizzeriaweb",
     "\\pizzeriaweb\\pizzeriaapp",
+    "\\pizzeriaweb\\pizzeriaapp\\static",
     "\\pizzeriaweb\\pizzeriaapp\\templates",
-    "\\pizzeriaweb\\pizzeriaapp\\templates\\pizzeriaweb",
     "\\pizzeriaweb\\pizzeriaweb"
   ],
-  "SelectedNode": "\\pizzeriaweb\\db.sqlite3",
+  "SelectedNode": "\\pizzeriaweb\\pizzeriaapp\\views.py",
   "PreviewInSolutionExplorer": false
 }
