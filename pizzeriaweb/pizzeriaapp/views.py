@@ -15,3 +15,15 @@ def menu(request):
     listaPizzas = Pizza.objects.all()
     listaComplementos = Complemento.objects.all()
     return render(request, 'menu.html', {'pizzas':listaPizzas, 'complementos':listaComplementos})
+
+def gallery(request):
+    listaPizzas = Pizza.objects.all()
+    return render(request, 'gallery.html', {'pizzas':listaPizzas})
+
+def blog(request):
+    listaPizzas = Pizza.objects.all()
+    return render(request, 'blog.html', {'pizzas':listaPizzas})
+
+def reservations(request):
+    listaPizzas = Pizza.objects.all()
+    return render(request, 'reservations.html', {'pizzas':listaPizzas})
