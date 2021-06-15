@@ -4,9 +4,9 @@ from .models import Pizza, Complemento
 @admin.register(Pizza)
 class PizzaAdmin(admin.ModelAdmin):
 
-    list_display = ['nombre', 'ingredientes', 'updated']
-    list_filter = ['nombre', 'ingredientes']
-    fields = ('nombre', 'ingredientes', 'foto')    
+    list_display = ['nombre', 'ingredientes', 'precio_individual', 'precio_mediana', 'precio_familiar', 'updated', 'foto']
+    list_filter = ['nombre', 'ingredientes', 'precio_individual', 'precio_mediana', 'precio_familiar', 'foto']
+    fields = ('nombre', 'ingredientes', 'precio_individual', 'precio_mediana', 'precio_familiar', 'foto')    
     search_fields = ('nombre', 'ingredientes')
     
 
@@ -16,9 +16,9 @@ class PizzaAdmin(admin.ModelAdmin):
 @admin.register(Complemento)
 class ComplementoAdmin(admin.ModelAdmin):
 
-    list_display = ['nombre', 'descripcion', 'updated']
-    list_filter = ['nombre', 'descripcion']
-    fields = ('nombre', 'descripcion', 'foto')    
+    list_display = ['nombre', 'descripcion', 'precio', 'updated']
+    list_filter = ['nombre', 'descripcion', 'precio']
+    fields = ('nombre', 'descripcion', 'precio', 'foto')    
     search_fields = ('nombre', 'descripcion')
     
 

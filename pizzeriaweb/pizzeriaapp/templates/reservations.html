@@ -57,7 +57,7 @@
         <div id="main" class="ajaxable layout-wide">
             <div class="header-hero-section" id="hero-section">
                 <div class="header-hero-custom-section">
-                    <div class="hero-section-wrap be-section full-screen-height full-yes   be-bg-overlay  clearfix" style="background: url(upload/contactpizza.jpg) repeat scroll top left;; height: px !important;">
+                    <div class="hero-section-wrap be-section full-screen-height full-yes   be-bg-overlay  clearfix" style="background: url({% static 'images/pizza_margarita.jpg' %}) repeat scroll top left;; height: px !important;">
                         <div class="section-overlay" style="background: #000000; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);filter: alpha(opacity=30);-moz-opacity: 0.3;-khtml-opacity: 0.3;opacity: 0.3;"></div>
                         <div class="be-row be-wrap">
                             <div class="hero-section-inner-wrap">
@@ -78,7 +78,7 @@
                 <div id="header-inner-wrap" class=" style3">
                     <div id="left-header-mobile" class="clearfix">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
+                            <a href=".."><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div class="mobile-nav-controller-wrap">
                             <div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"><i class="font-icon icon-list2"></i></div>
@@ -86,7 +86,7 @@
                     </div>
                     <div id="header-wrap" class="be-wrap clearfix" data-default-height="100" data-sticky-height="92">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
+                            <a href=".."><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div id="header-controls-right">
                             <div class="header-code-widgets">
@@ -142,16 +142,16 @@
 
                                         <div class="one-half column-block" data-animation="" style="background-color: #f4efe8;  ">
                                             <div class="be-custom-column-pad" style="padding-top: 30px;padding-right: 30px;padding-bottom: 30px;padding-left: 30px;">
-                                                <h5 style="text-align: left;"><span style="color: #5e472b;">Working Hours</span></h5>
-                                                <p style="text-align: left;"><span style="color: #82786e;">Mon &#8211; Thurs&nbsp;: 1PM &#8211; 12 PM</span>
+                                                <h5 style="text-align: left;"><span style="color: #5e472b;">Horario</span></h5>
+                                                <p style="text-align: left;"><span style="color: #82786e;">Lun &#8211; Jue&nbsp;: 20:00 &#8211; 23:30</span>
                                                     <br />
-                                                    <span style="color: #82786e;"> Fri &#8211; Sun : &nbsp;10 AM &#8211; 11 PM</span></p>
-                                                <h5 style="text-align: left;"><span style="color: #5e472b;">Phone</span></h5>
-                                                <p style="text-align: left;"><span style="color: #82786e;">001-980-123-4567</span>
+                                                    <span style="color: #82786e;"> Vie &#8211; Dom : &nbsp;20:00 &#8211; 00:00</span></p>
+                                                <h5 style="text-align: left;"><span style="color: #5e472b;">Tel</span></h5>
+                                                <p style="text-align: left;"><span style="color: #82786e;">653400633</span>
                                                     <br />
-                                                    <span style="color: #82786e;"> 000-980-123-7654</span></p>
+                                                    <span style="color: #82786e;">96 183 24 72</span></p>
                                                 <h5 style="text-align: left;"><span style="color: #5e472b;">Email</span></h5>
-                                                <p><span style="color: #82786e;">orders@palermo.com</span></p>
+                                                <p><span style="color: #82786e;">pedidos@palermo.com</span></p>
                                             </div>
                                         </div>
 
@@ -215,7 +215,7 @@
             </div>
 
             <div class="map mb30">
-              <div id="google_map" style="height:400px;width: 100%;"></div><!-- map container -->
+              <div id="google_map" style="height:400px;width: 100%;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.4172575043012!2d-0.4621925846289177!3d39.59528207946904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd605cc5f3138c93%3A0x99f023d9fb6356c5!2sGran%20Via%20del%20Nte.%2C%2034%2C%2046117%20B%C3%A9tera%2C%20Valencia!5e0!3m2!1ses!2ses!4v1623750248234!5m2!1ses!2ses" width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div><!-- map container -->
             </div>
 
             <footer id="footer" class="layout-wide">
@@ -265,7 +265,6 @@
     <script type='text/javascript' src="{% static 'js/be-slider.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/jquery-ui-1.8.22.custom.min.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/jquery.easing.min.js' %}"></script>
-    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZsDkJFLS0b59q7cmW0EprwfcfUA8d9dg'></script>
     <script type='text/javascript' src="{% static 'js/mapmarker.jquery.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/mapcoordinates.js' %}"></script>
 

@@ -56,7 +56,7 @@
         <div id="main" class="ajaxable layout-wide">
             <div class="header-hero-section" id="hero-section">
                 <div class="header-hero-custom-section">
-                    <div class="hero-section-wrap be-section full-screen-height full-yes be-bg-cover  be-bg-overlay  clearfix" style="background: url(upload/palermo_demos_21.jpg) no-repeat fixed center center;; height: px !important;">
+                    <div class="hero-section-wrap be-section full-screen-height full-yes be-bg-cover  be-bg-overlay  clearfix" style="background: url({% static 'images/pizza_margarita.jpg' %}) no-repeat fixed center center;; height: px !important;">
                         <div class="section-overlay" style="background: #000000; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);filter: alpha(opacity=30);-moz-opacity: 0.3;-khtml-opacity: 0.3;opacity: 0.3;"></div>
                         <div class="be-row be-wrap">
                             <div class="hero-section-inner-wrap">
@@ -78,7 +78,7 @@
                 <div id="header-inner-wrap" class=" style3">
                     <div id="left-header-mobile" class="clearfix">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
+                            <a href=".."><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div class="mobile-nav-controller-wrap">
                             <div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"><i class="font-icon icon-list2"></i></div>
@@ -86,7 +86,7 @@
                     </div>
                     <div id="header-wrap" class="be-wrap clearfix" data-default-height="100" data-sticky-height="92">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
+                            <a href=".."><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div id="header-controls-right">
                             <div class="header-code-widgets">
@@ -143,11 +143,12 @@
                                                 <div class="portfolio-all-wrap ">
                                                     <div class="portfolio full-screen full-screen-gutter style1-gutter two-col" style="margin-right: 40px;" data-action="get_be_gallery_with_pagination" data-paged="1" data-masonry="0" data-source='{"source":"selected","account_name":"themeforest","count":"10","col":"two","masonry":0}' data-gutter-width="40" data-images-array="44,40,37,39,36,35,34,15,16,32" data-col="two" data-items-per-load="9" data-hover-style="style1-hover" data-image-grayscale="c_to_c" data-lightbox-type="photoswipe" data-image-source="selected" data-image-effect="none" data-thumb-overlay-color="rgba(0,0,0,0.5)" data-grad-style-color="" data-like-button="1">
                                                         <div class="portfolio-container clickable clearfix portfolio-shortcode be-photoswipe-gallery none ">
+                                                            {% for c in pizzas %}
                                                             <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
                                                                 <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_08.jpg" data-size="1920x1255" data-href="upload/palermo_demos_08.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
+                                                                    <a href="{{c.foto.url}}" data-size="1920x1255" data-href="{{c.foto.url}}" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
                                                                         <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_08-1000x625.jpg" alt /></div>
+                                                                            <div class="flip-img-wrap none-effect"><img src="{{c.foto.url}}" alt /></div>
                                                                         </div>
                                                                         <div class="thumb-overlay">
                                                                             <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
@@ -158,20 +159,20 @@
                                                                         </div>
                                                                     </a>
                                                                     <div class="pizza-detail">
-                                                                        <h4>Hawai</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
+                                                                        <h4>{{c.nombre}}</h4>
+                                                                        <p>{{c.ingredientes}}</p>
                                                                         <div class="price-col">
                                                                             <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
+                                                                                <span class="price-title">INDIVIDUAL</span>
+                                                                                <span class="price">{{c.precio_individual}}</span>
                                                                             </div>
                                                                             <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
+                                                                                <span class="price-title">MEDIANA</span>
+                                                                                <span class="price">{{c.precio_mediana}}</span>
                                                                             </div>
                                                                             <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
+                                                                                <span class="price-title">FAMILIAR</span>
+                                                                                <span class="price">{{c.precio_familiar}}</span>
                                                                             </div>
                                                                             <div class="clear"></div>
                                                                         </div>
@@ -179,258 +180,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
-                                                                <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_09.jpg" data-size="1920x1280" data-href="upload/palermo_demos_09.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
-                                                                        <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_09-1000x625.jpg" alt /></div>
-                                                                        </div>
-                                                                        <div class="thumb-overlay">
-                                                                            <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
-                                                                                <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
-                                                                                    <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                    <div class="pizza-detail">
-                                                                        <h4>Margherita</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
-                                                                        <div class="price-col">
-                                                                            <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
-                                                                <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_24.jpg" data-size="1920x1280" data-href="upload/palermo_demos_24.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
-                                                                        <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_24-1000x625.jpg" alt /></div>
-                                                                        </div>
-                                                                        <div class="thumb-overlay">
-                                                                            <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
-                                                                                <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
-                                                                                    <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                    <div class="pizza-detail">
-                                                                        <h4>Classic</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
-                                                                        <div class="price-col">
-                                                                            <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
-                                                                <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_16.jpg" data-size="1920x1278" data-href="upload/palermo_demos_16.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
-                                                                        <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_16-1000x625.jpg" alt /></div>
-                                                                        </div>
-                                                                        <div class="thumb-overlay">
-                                                                            <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
-                                                                                <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
-                                                                                    <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                    <div class="pizza-detail">
-                                                                        <h4>Calzone</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
-                                                                        <div class="price-col">
-                                                                            <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
-                                                                <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_18.jpg" data-size="1920x1280" data-href="upload/palermo_demos_18.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
-                                                                        <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_18-1000x625.jpg" alt /></div>
-                                                                        </div>
-                                                                        <div class="thumb-overlay">
-                                                                            <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
-                                                                                <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
-                                                                                    <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                    <div class="pizza-detail">
-                                                                        <h4>NEAPOLITAN</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
-                                                                        <div class="price-col">
-                                                                            <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
-                                                                <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_12.jpg" data-size="1920x1280" data-href="upload/palermo_demos_12.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
-                                                                        <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_12-1000x625.jpg" alt /></div>
-                                                                        </div>
-                                                                        <div class="thumb-overlay">
-                                                                            <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
-                                                                                <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
-                                                                                    <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                    <div class="pizza-detail">
-                                                                        <h4>MEXICAN</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
-                                                                        <div class="price-col">
-                                                                            <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
-                                                                <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_05.jpg" data-size="1920x1280" data-href="upload/palermo_demos_05.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
-                                                                        <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_05-1000x625.jpg" alt /></div>
-                                                                        </div>
-                                                                        <div class="thumb-overlay">
-                                                                            <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
-                                                                                <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
-                                                                                    <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                    <div class="pizza-detail">
-                                                                        <h4>FROM SEA</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
-                                                                        <div class="price-col">
-                                                                            <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="element be-hoverlay not-wide no-wide-width-height style1-hover c_to_c" style="margin-bottom: 40px !important;">
-                                                                <div class="element-inner" style="margin-left: 40px;">
-                                                                    <a href="upload/palermo_demos_21.jpg" data-size="1920x1920" data-href="upload/palermo_demos_21.jpg" class="thumb-wrap  image-popup-vertical-fit  mfp-image" title="">
-                                                                        <div class="flip-wrap">
-                                                                            <div class="flip-img-wrap none-effect"><img src="upload/palermo_demos_21-1000x625.jpg" alt /></div>
-                                                                        </div>
-                                                                        <div class="thumb-overlay">
-                                                                            <div class="thumb-bg" style="background-color:rgba(0,0,0,0.5); ">
-                                                                                <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
-                                                                                    <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                    <div class="pizza-detail">
-                                                                        <h4>FARMER</h4>
-                                                                        <p>Pineapple, mushrooms, black olives, tomato sauce</p>
-                                                                        <div class="price-col">
-                                                                            <div class="col-3-price first-price">
-                                                                                <span class="price-title">Small</span>
-                                                                                <span class="price">$7.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">MEDIUM</span>
-                                                                                <span class="price">$12.99</span>
-                                                                            </div>
-                                                                            <div class="col-3-price">
-                                                                                <span class="price-title">LARGE</span>
-                                                                                <span class="price">$16.99</span>
-                                                                            </div>
-                                                                            <div class="clear"></div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            {% endfor %}                                                            
                                                         </div>
                                                     </div>
                                                 </div>

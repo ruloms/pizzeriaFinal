@@ -1,4 +1,4 @@
-{% load static  %}
+﻿{% load static  %}
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -8,9 +8,9 @@
 <!--[if gt IE 8]><!-->
 <!-- Orange -->
 
-<html class="no-js" lang="en-US"> <!--<![endif]-->
+<html class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
+     <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
     <![endif]-->
@@ -58,7 +58,7 @@
         <div id="main" class="ajaxable layout-wide">
             <div class="header-hero-section" id="hero-section">
                 <div class="header-hero-custom-section">
-                    <div class="hero-section-wrap be-section full-screen-height full-yes be-bg-cover be-bg-parallax be-bg-overlay  clearfix" style="background: url(upload/aboutpizza.jpg) no-repeat fixed center center;; height: px !important;">
+                    <div class="hero-section-wrap be-section full-screen-height full-yes be-bg-cover be-bg-parallax be-bg-overlay  clearfix" style="background: url({% static 'images/pizza_margarita.jpg' %}) no-repeat fixed center center;; height: px !important;">
                         <div class="section-overlay" style="background: #000000; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);filter: alpha(opacity=20);-moz-opacity: 0.2;-khtml-opacity: 0.2;opacity: 0.2;"></div>
                         <div class="be-row be-wrap">
                             <div class="hero-section-inner-wrap">
@@ -80,7 +80,7 @@
                 <div id="header-inner-wrap" class=" style3">
                     <div id="left-header-mobile" class="clearfix">
                         <div class="logo">
-                           <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
+                           <a href=".."><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div class="mobile-nav-controller-wrap">
                             <div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"><i class="font-icon icon-list2"></i></div>
@@ -88,7 +88,7 @@
                     </div>
                     <div id="header-wrap" class="be-wrap clearfix" data-default-height="100" data-sticky-height="92">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
+                            <a href=".."><img class="normal-logo" src="{% static 'logo.png' %}" alt="Logo" /><img class="sticky-logo" src="{% static 'logo.png' %}" alt="Logo" /></a>
                         </div>
                         <div id="header-controls-right">
                             <div class="header-code-widgets">
@@ -142,15 +142,15 @@
                                 <div class="be-section-pad clearfix" style="padding-top:120px;padding-bottom:120px;">
                                     <div class="be-row be-wrap clearfix">
                                         <div class="one-half column-block"  >
-                                            <div class="be-custom-column-inner">
-                                                <p><img class="alignnone size-large wp-image-15" src="upload/about-palermo.jpg" alt="about-palermo" width="1024" height="683"></p>
+                                            <div class="be-custom-column-inner">                                                
+                                                <p><img class="alignnone size-large wp-image-15" src="{% static 'upload/antigua.jpg' %}" alt="about-palermo" width="500" height="280"></p>                                               
                                             </div>
                                         </div>
                                         <div class="one-half column-block"  >
                                             <div class="be-custom-column-inner">
-                                                <h2><span style="color: #999999;">Our Story</span></h2>
-                                                <p>Ut nec hinc dolor possim.Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei.&nbsp;Sea summo mazim ex, ea errem eleifend definitionem vim. Ut nec hinc dolor possim.</p>
-                                                <p>Mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim. Ut nec hinc dolor possim.&nbsp;Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim.</p>
+                                                <h2><span style="color: #999999;">Nuestra historia</span></h2>
+                                                <p>Nacidos en 1960 y aprendiendo y mejorando día a día. Nuestro secreto es nuestro horno de leña, nuestros ingredientes de calidad y nuestros expertos trabajadores.</p>
+                                                <p>Mas de 60 años dando el mejor servicio y la mayor calidad.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -237,15 +237,15 @@
                                     <div class="be-row be-wrap clearfix">
                                         <div class="one-half column-block"  >
                                             <div class="be-custom-column-inner">
-                                                <h2><span style="color: #999999;">Our Master Chef</span></h2>
-                                                <p>Ut nec hinc dolor possim.Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei.&nbsp;Sea summo mazim ex, ea errem eleifend definitionem vim. Ut nec hinc dolor possim.</p>
-                                                <p>Mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim. Ut nec hinc dolor possim.&nbsp;Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim.</p>
-                                                <div class="be-button-wrap none "><a class="be-shortcode largebtn be-button left-icon    bg-animation-none" href="http://themeforest.net" style="border-style: solid; border-width:0px; border-color: #000000;background-color: #000000; color: #ffffff; " data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#efefef" data-color="#ffffff" data-hover-color="#000000" data-border-color="#000000" data-hover-border-color="#f0b452">DISCOVER OUR MENU</a></div>
+                                                <h2><span style="color: #999999;">Nuestro experto chef</span></h2>
+                                                <p>Carlo Roncetti es nuestro experto y reconocido chef. Mas de 30 años en la profesión lo convierten en uno de los mejores en lo suyo.</p>
+                                                <p>Carlo ha trabajado en prestigiosas pizzerias y ha obtenido numerosos premios.</p>
+                                                <div class="be-button-wrap none "><a class="be-shortcode largebtn be-button left-icon    bg-animation-none" href="../menu" style="border-style: solid; border-width:0px; border-color: #000000;background-color: #000000; color: #ffffff; " data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#efefef" data-color="#ffffff" data-hover-color="#000000" data-border-color="#000000" data-hover-border-color="#f0b452">Descubre nuestro menu</a></div>
                                             </div>
                                         </div>
                                         <div class="one-half column-block"  >
                                             <div class="be-custom-column-inner">
-                                                <p><img class="alignnone size-large wp-image-38" src="upload/palermo_demos_10-1024x717.jpg" alt="palermo_demos_10" width="1024" height="717"></p>
+                                                <p><img class="alignnone size-large wp-image-38" src="{% static 'upload/pizzero.jpg' %}" alt="palermo_demos_10" width="1024" height="717"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -260,13 +260,13 @@
                                                     <ul class="itemwrap">
                                                         <li>
                                                             <div class="be-slide-bg-holder">
-                                                                <div class="be-slide-bg be-bg-cover be-bg-parallax " data-image="upload/palermo_demos_21.jpg"><i class="font-icon loader-style4-wrap loader-icon"></i></div>
+                                                                <div class="be-slide-bg be-bg-cover be-bg-parallax " data-image="{% static 'upload/inicio.jpg' %}"><i class="font-icon loader-style4-wrap loader-icon"></i></div>
                                                                 <div class="be-wrap">
                                                                     <div class="be-slider-content-wrap">
                                                                         <div class="be-slider-content clearfix">
                                                                             <div class="be-slider-content-inner-wrap" style="width: 60%;">
                                                                                 <div class="be-animate fadeIn animated be-slider-content-inner">
-                                                                                    <h2 style="text-align: center;color:#fff;text-shadow: 2px 2px #000;">We started our journey in the year 2001 in Downtown New York</h2></div>
+                                                                                    <h2 style="text-align: center;color:#fff;text-shadow: 2px 2px #000;">Nuestros inicios fueron en el año 1960 en madrid, España.</h2></div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -275,13 +275,13 @@
                                                         </li>
                                                         <li>
                                                             <div class="be-slide-bg-holder">
-                                                                <div class="be-slide-bg be-bg-cover be-bg-parallax " data-image="upload/palermo_demos_19.jpg"><i class="font-icon loader-style4-wrap loader-icon"></i></div>
+                                                                <div class="be-slide-bg be-bg-cover be-bg-parallax " data-image="{% static 'upload/1990.jpg' %}"><i class="font-icon loader-style4-wrap loader-icon"></i></div>
                                                                 <div class="be-wrap">
                                                                     <div class="be-slider-content-wrap">
                                                                         <div class="be-slider-content clearfix">
                                                                             <div class="be-slider-content-inner-wrap" style="width: 40%;margin: 0px;left: 2%;position: relative;float: none;">
                                                                                 <div class="be-animate fadeIn animated be-slider-content-inner">
-                                                                                    <h2 style="color:#fff;text-shadow: 2px 2px #000;">We went on to open&nbsp;6&nbsp; Pizza Restaurants within our first 3 years</h2></div>
+                                                                                    <h2 style="color:#fff;text-shadow: 2px 2px #000;">Abrimos nuestra &nbsp;segunda&nbsp; pizzeria en 1990 en Valencia.</h2></div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -290,14 +290,14 @@
                                                         </li>
                                                         <li>
                                                             <div class="be-slide-bg-holder">
-                                                                <div class="be-slide-bg be-bg-cover be-bg-parallax " data-image="upload/palermo_demos_09.jpg"><i class="font-icon loader-style4-wrap loader-icon"></i></div>
+                                                                <div class="be-slide-bg be-bg-cover be-bg-parallax " data-image="{% static 'upload/premio.jpg' %}"><i class="font-icon loader-style4-wrap loader-icon"></i></div>
                                                                 <div class="be-wrap">
                                                                     <div class="be-slider-content-wrap">
                                                                         <div class="be-slider-content clearfix">
                                                                             <div class="be-slider-content-inner-wrap" style="width: 50%;">
                                                                                 <div class="be-animate fadeIn animated be-slider-content-inner">
-                                                                                    <h2 style="text-align: center;color:#fff;text-shadow: 2px 2px #000;">Rated as the best Pizzas in downtown New York for the last 5 years in a row.</h2>
-                                                                                    <div class="be-button-wrap align-block block-center "><a class="be-shortcode mediumbtn be-button left-icon    bg-animation-none" href="http://themeforest.net" style="border-style: solid; border-width:2px; border-color: #fff;background-color: transparent; color: #fff; " data-animation="fadeIn" data-bg-color="transparent" data-hover-bg-color="#fff" data-color="#fff" data-hover-color="#ffffff" data-border-color="#fff" data-hover-border-color="#fff">OUR MENU</a></div>
+                                                                                    <h2 style="text-align: center;color:#fff;text-shadow: 2px 2px #000;">Reconocidos como la mejor pizzeria de España durante 5 años seguidos.</h2>
+                                                                                    <div class="be-button-wrap align-block block-center "><a class="be-shortcode mediumbtn be-button left-icon    bg-animation-none" href="../menu" style="border-style: solid; border-width:2px; border-color: #fff;background-color: transparent; color: black; " data-animation="fadeIn" data-bg-color="transparent" data-hover-bg-color="#fff" data-color="black" data-hover-color="#ffffff" data-border-color="#fff" data-hover-border-color="#fff">Nuestro menu</a></div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
